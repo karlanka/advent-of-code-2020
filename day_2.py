@@ -25,7 +25,7 @@ def two(input):
     for rule_pw in input:
         limits, letter, pw = rule_pw.split(' ')
         lower, upper = map(int, limits.split('-'))
-        if bool(pw[lower-1] == letter[0]) ^ bool(pw[upper-1] == letter[0]):
+        if (pw[lower-1] == letter[0]) != (pw[upper-1] == letter[0]):
             valid += 1
     return valid
 
