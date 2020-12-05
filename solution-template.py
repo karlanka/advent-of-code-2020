@@ -1,15 +1,15 @@
-from aoc_utils import get_input
+from aoc_utils import get_input, get_input_no_line
 import sys
 
 def one(input):
     """
-    >>> one()
+    >>> one(input)
     """
     return
 
 def two(input):
     """
-    >>> two()
+    >>> two(input)
     """
     return
 
