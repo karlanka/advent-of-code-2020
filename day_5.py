@@ -12,9 +12,8 @@ def decoder(boarding_pass):
     >>> decoder('BBFFBBFRLL')
     820
     """
-    row = ''.join(['1' if x == 'B' else '0' for x in boarding_pass[:7]])
-    column = ''.join(['1' if x == 'R' else '0' for x in boarding_pass[7:]])
-    return int(row, 2) * 8 + int(column, 2)
+    boarding_pass = boarding_pass.replace('B','1').replace('R','1').replace('F','0').replace('L','0')
+    return int(boarding_pass, 2)
 
 
 def one(input):
