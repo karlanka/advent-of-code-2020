@@ -4,22 +4,19 @@ import sys
 def computer(instructions):
     acc, pos = 0, 0
     visited = []
-    length = len(instructions)
-    while True:
-        if pos > length - 1:
+    while pos not in visited:
+        if pos > len(instructions) - 1:
             return acc, False
-        if pos in visited:
-            return acc, True
         visited.append(pos)
         inst, val = instructions[pos]
         if inst == 'nop':
             pos += 1
-            continue
         elif inst == 'acc':
             acc += val
             pos += 1
         elif inst == 'jmp':
             pos += val
+    return acc, True
 
 def one(input):
     """
