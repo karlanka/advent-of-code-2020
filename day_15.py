@@ -23,7 +23,7 @@ def main():
     input = [0,14,6,20,1,4]
     
     print("first:", one_and_two(input,2020))
-    #print("second:", one_and_two(input, 30000000))
+    print("second:", one_and_two(input, 30000000))
 
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == '-t':
