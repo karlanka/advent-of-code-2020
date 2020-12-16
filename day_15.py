@@ -1,6 +1,6 @@
 from aoc_utils import get_input, get_input_no_line
 import sys
-
+import time
 
 def one_and_two(input, steps):
     """
@@ -17,13 +17,19 @@ def one_and_two(input, steps):
             speaks = 0
         spoken[prev] = ix - 1
         prev = speaks
+        
     return prev
 
 def main():
     input = [0,14,6,20,1,4]
     
+    start = time.time()
     print("first:", one_and_two(input,2020))
+    print('It took', time.time()-start, 'seconds for first.')
+    
+    start = time.time()
     print("second:", one_and_two(input, 30000000))
+    print('It took', time.time()-start, 'seconds for second.')
 
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == '-t':
